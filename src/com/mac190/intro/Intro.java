@@ -15,6 +15,11 @@ public class Intro {
                     *     *
                        *
          */
+        System.out.println("     *");
+        System.out.println("  *     *");
+        System.out.println("*         *");
+        System.out.println("  *     *");
+        System.out.println("     *");
     }
 
 }

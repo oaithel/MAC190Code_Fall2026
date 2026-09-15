@@ -27,20 +27,28 @@ write it as follows: numberOfStudentInClass
 
  */
 public class Variables {
-    //define a variable to contain the number of students in the class
-
-    //there are 19 display it
-
-    //add 3 to it.
-
-    //define a variable to contain the changes in your pocket
-    //you have 14 dollars and 57 cents. display it
-
-    //subtract 12 cents less than half of it. display it
-
-    //find the exact number of dollars left in a variables dollarsLeft
-    //display it.
-
-    //define a varibale to contain the answer y for yes and n for no;
-    //the answeer is yes. Display it in capital form.
+    public static void main(String[] args) {
+        //define a variable to contain the number of students in the class
+        int numberStudents = 19;
+        //there are 19 display it
+        System.out.println("There are " + numberStudents + " students in the class");
+        //add 3 to it.
+        numberStudents += 3;
+        System.out.println("Now, there are " + numberStudents + " students in the class");
+        //define a variable to contain the changes in your pocket
+        //you have 14 dollars and 57 cents. display it
+        float changeInPocket = 14.57f;
+        System.out.println("There are $" + changeInPocket + " in my pocket");
+        //subtract 12 cents less than half of it. display it
+        changeInPocket -= changeInPocket/2 - 0.12f;
+        System.out.println("There are $" + changeInPocket + " left in my pocket");
+        //find the exact number of dollars left in a variables dollarsLeft
+        //display it.
+        int dollarsLeft = (int) changeInPocket;
+        System.out.println("There are $" + dollarsLeft + " dollars left");
+        //define a variable to contain the answer y for yes and n for no;
+        //the answer is yes. Display it in capital form.
+        char answer = 'y';
+        System.out.println("Your answer is: " + Character.toUpperCase(answer));
+    }
 }

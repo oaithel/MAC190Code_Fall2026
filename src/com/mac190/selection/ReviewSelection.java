@@ -43,6 +43,23 @@ public class ReviewSelection {
     public static void main(String[] args) {
         //implement the statements above and display if each is true
         //or false. Verify them,.
+        int var1 = 2, var2 = 4, var3 = 6;
+        if(var1 < 2 || var2 > 2){
+            System.out.println("The condition: var1 < 2 || var2 > 2 is True");
+        }else{
+            System.out.println("The condition: var1 < 2 || var2 > 2 is False");
+        }
+        /* not allowed
+        if(var1 == 2 || var3){
+            System.out.println("Error");
+        }
+         */
+        if(var1 <= 2 || var2 < 4 && var3 < 4){
+            System.out.println("var1 <= 2 || var2 < 4 && var3 < 4 is True");
+        }else{
+            System.out.println("var1 <= 2 || var2 < 4 && var3 < 4 is False");
+        }
+        System.out.println("if(var1 <= 2 && var2 < 4 || var3 < 4) is " + (var1 <= 2 && var2 < 4 || var3 < 4));
     }
 
 }

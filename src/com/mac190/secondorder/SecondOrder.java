@@ -1,4 +1,4 @@
-package com.mac190;
+package com.mac190.secondorder;
 /*
 Write a Java program that reads the three coefficients of a
 second order equation a, b, and c (aX^2 + bX + C = 0)

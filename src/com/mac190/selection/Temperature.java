@@ -9,6 +9,12 @@ temperature to the appropriate one (fah to celcius or celcius to fah)
  Celcius = Fahrenheit - 32 multiplied by 4/9.
  fah = celcius multiplied by 9/4 add 32.
  */
+/*
+Loops: Make the program run for as long as the user wishes to
+continue.
+At the end of the program ask the user if she/he wishes to continue
+if no quit if yes continue.
+ */
 public class Temperature {
     public static void main(String[] args) {
         //create a Scanner

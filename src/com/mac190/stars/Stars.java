@@ -1,4 +1,7 @@
 package com.mac190.stars;
+
+import java.util.Scanner;
+
 /*
 Write a program that accepts the number of lines of stars to display
 and displays them as follows:
@@ -24,6 +27,68 @@ j = lines - i
 your i loop loops lines number of times
 your j loop inside the i loop loops lines - i times.
 
+
+Shape 2:
+*
+**
+***
+****
+*****
+i        j
+0        1
+1        2
+2        3
+3        4
+4        5
+
+j = i + 1
+
  */
 public class Stars {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of lines: ");
+        int lines = sc.nextInt();
+        System.out.println("-----------Shape1--------");
+        for(int i =0; i < lines; i++){
+            for(int j = 0; j < lines - i; j++){
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+        System.out.println(" -----------Shape2----------");
+        for(int i =0; i < lines; i++){
+            for(int j = 0; j < i+1; j++){
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+        //TODO:
+        /*
+        Shape 3
+            *
+           **
+          ***
+         ****
+        *****
+
+        k loop sfor displaying spaces and j loop for stars
+        i      k loop       j
+        0       4           1
+        1       3           2
+        2       2           3
+        3       1           4
+        4       0           5
+
+        Do the same for Shape4
+        *****
+         ****
+          ***
+           **
+            *
+
+         */
+
+
+    }
 }

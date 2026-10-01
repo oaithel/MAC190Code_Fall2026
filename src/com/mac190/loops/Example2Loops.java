@@ -17,18 +17,31 @@ public class Example2Loops {
         int oddCounter = 0;
         int evenCounter = 0;
         int pairsCounter = 0;
-        int previous = 0;
+        int previous = -1;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number (negative to exit): ");
         int number = scanner.nextInt();
-        while (number > 0) {
+        boolean bPairsPrevious = false;
+        while (number >= 0) {
             if (number % 2 == 0) { //even???
                 evenCounter++;
             } else {
                 oddCounter++;
             }
+            /*
             if (number == previous) {
                 pairsCounter++;
+                previous = -1;
+            }else {
+                previous = number;
+            }
+
+             */
+            if (number == previous && bPairsPrevious == false){
+                pairsCounter++;
+                bPairsPrevious = true;
+            } else {
+                bPairsPrevious = false;
             }
             previous = number;
             System.out.println("Enter a number (negative to exit): ");

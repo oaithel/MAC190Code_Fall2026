@@ -58,12 +58,12 @@ public class Stars {
         }
         System.out.println(" -----------Shape2----------");
         for(int i =0; i < lines; i++){
-            for(int j = 0; j < i+1; j++){
+            for(int j = 0; j <= i; j++){
                 System.out.print("*");
             }
             System.out.println(" ");
         }
-        //TODO:
+        //TODO: HW4
         /*
         Shape 3
             *

@@ -79,16 +79,51 @@ public class Stars {
         2       2           3
         3       1           4
         4       0           5
+        k = Lines - i - 1
+        j = i + 1
+         */
+        System.out.println("--------------Shape 3-----------");
 
+        for(int i = 0; i < lines; i++){
+            //display spaces first
+            for(int k = 0; k < lines-i-1; k++){
+                System.out.print(" ");
+            }
+            //display the stars
+            for(int j = 0; j < i+1; j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+        /*
         Do the same for Shape4
         *****
          ****
           ***
            **
             *
-
+         i      k (spaces)      j (stars)
+         0      0               5
+         1      1               4
+         2      2               3
+         3      3               2
+         4      4               1
+         k = i
+         j = lines - i
          */
+        System.out.println("--------------Shape 4-----------");
 
+        for(int i = 0; i < lines; i++){
+            //display spaces first
+            for(int k = 0; k < i; k++){
+                System.out.print(" ");
+            }
+            //display the stars
+            for(int j = 0; j < lines-i; j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
 
     }
 }

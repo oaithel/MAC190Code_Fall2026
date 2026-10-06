@@ -51,17 +51,28 @@ public class IntroClasses {
         obj1.print();
 
         //create an object ExampleClass obj2.
-
+        ExampleClass obj2 = new ExampleClass();
         //increment it one time
-
+        obj2.increment();
         //print its value
-
+        obj2.print();
         //assign Obj1 to obj2
-
+        obj2 = obj1; //obj2 is referring to the same object as obj1
         //print both objects. What happened?
-
+        obj1.print();
+        obj2.print();
         //increment obj1 twice
-
+        obj1.increment();
+        obj1.increment();
         //display both. Why did you get that result???
+        //both obj1 and obj2 refer to the same object (the first object)
+        //the second object to which obj2 used to refer to will be destroyed after
+        //going out of scope because no reference to it.
+        obj1.print();
+        obj2.print();
+        //change num of obj1 to 10. To change an attribute of an object. we use
+        //objectName.variableName = value; if we have right of access.
+        obj2.num = 10; //can be done because num is public
+        obj1.print();
     }
 }

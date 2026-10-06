@@ -1,4 +1,4 @@
-package com.mac190.selection;
+package com.mac190.temperature;
 
 public class CTemperatureTester {
     public static void main(String[] args) {

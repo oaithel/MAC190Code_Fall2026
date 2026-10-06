@@ -1,4 +1,4 @@
-package com.mac190.selection;
+package com.mac190.temperature;
 /*
 design a class CTemperature that has a variable for the temperature
 and one for the format. And a method convert that converts the

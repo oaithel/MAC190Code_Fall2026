@@ -7,9 +7,30 @@ Change the main to use object from this class.
  */
 public class CTemperature {
     //member variable for temperature
-    double temperature;
+    private double temperature;
     //member variable for the format
-    char format;
+    private char format;
+    //getter is a method that returns the value of a private member variable
+   // public typeVariableName getVariableName(){
+   //         return variableName;
+    //}
+    public double getTemperature(){
+        return temperature;
+    }
+    public char getFormat(){
+        return format;
+    }
+    //setter is a method that allows the outside to change the value of
+    //a private member variable.
+    // public void setVariableName(typeVariableName param){
+    //              variableName = param;
+    //}
+    public void setTemperature(double temp){
+        temperature = temp;
+    }
+    public void setFormat(char f){
+        format = f;
+    }
     //method covert
     public void convert(){
         //if format is c convert to fahrenheit

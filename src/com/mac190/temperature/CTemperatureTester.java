@@ -12,15 +12,16 @@ public class CTemperatureTester {
         while (Character.toLowerCase(answer) == 'y') {
             CTemperature temp = new CTemperature();
             System.out.println("Enter the temperature to convert: ");
-            temp.temperature = sc.nextDouble();
+            temp.setTemperature(sc.nextDouble());
             //ask the user which format is the temperature
             //f for fahrenheit and c for celcius
             System.out.println("Press C if the temperature is in Celcius \n" +
                     "Press F if the temperature is in Fahrenheit: ");
             //get the format
-            temp.format = sc.next().charAt(0);
+            temp.setFormat(sc.next().charAt(0));
 
             temp.convert();
+            System.out.println("The initial temp was: " + temp.getTemperature());
             System.out.println("Press y if you want to continue: ");
             answer = sc.next().charAt(0);
         }

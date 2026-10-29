@@ -49,6 +49,10 @@ public class Point {
     public void setY(double y) {
         this.y = y;
     }
+    public void setXY(double a, double b){
+        x = a;
+        y = b;
+    }
     @Override
     public String toString() {
         return "(" + x +
@@ -63,7 +67,14 @@ public class Point {
     public double distance(Point p){
         return Math.sqrt(Math.pow(this.x-p.x, 2) + Math.pow(this.y - p.y, 2));
     }
+    public static double distance(Point t, Point p){
+        return Math.sqrt(Math.pow(t.x-p.x, 2) + Math.pow(t.y - p.y, 2));
+    }
+
     public Point add(Point p){
         return new Point((this.x+p.x)/2.0, (this.y+p.y)/2.0);
+    }
+    public static Point add(Point t, Point p){
+        return new Point((t.x+p.x)/2.0, (t.y+p.y)/2.0);
     }
 }

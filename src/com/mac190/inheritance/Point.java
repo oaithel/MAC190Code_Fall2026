@@ -60,9 +60,8 @@ public class Point {
     }
     @Override
     public boolean equals(Object object) {
-        if (object == null || getClass() != object.getClass()) return false;
-        Point point = (Point) object;
-        return Double.compare(x, point.x) == 0 && Double.compare(y, point.y) == 0;
+        if (!(object instanceof Point p)) return false;
+        return Double.compare(x, p.x) == 0 && Double.compare(y, p.y) == 0;
     }
     public double distance(Point p){
         return Math.sqrt(Math.pow(this.x-p.x, 2) + Math.pow(this.y - p.y, 2));

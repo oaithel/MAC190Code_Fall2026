@@ -26,5 +26,87 @@ getY returns y of the center.
 - Test both classes.
  */
 
+import java.util.Objects;
+
 public class Circle {
+    private Point center;
+    private double radius;
+
+    public Circle(){
+        center = new Point();
+        radius = 0;
+    }
+    public Circle(double a){
+        center = new Point();
+        radius = a;
+    }
+    public Circle(double a, double c){
+        center = new Point(a);
+        radius = c;
+    }
+    public Circle(double a, double b, double c){
+        center = new Point(a, b);
+        radius = c;
+    }
+    public Circle(Point a, double c){
+        center = new Point(a);//using a copy constructor
+        radius = c;
+    }
+    //copy constructor
+    public Circle(Circle c){
+        center = new Point(c.center);//using a copy constructor
+        radius = c.radius;
+    }
+    //getters
+    public Point getCenter() {
+        return center;
+    }
+    public void setCenter(Point p){
+        center = p;
+    }
+    public double getRadius(){
+        return radius;
+    }
+    public void setRadius(double a){
+        radius = a;
+    }
+    public double getX(){
+        return center.getX();
+    }
+    public double getY(){
+        return center.getY();
+    }
+    public void setX(double a){
+        center.setX(a);
+    }
+    public void setY(double a){
+        center.setY(a);
+    }
+    public void setXY(double a, double b){
+        center.setXY(a, b);
+    }
+    //toString
+    public String toString(){
+        return "[" + center.toString() +", " + radius + "]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Circle circle = (Circle) o;
+        return Double.compare(radius, circle.radius) == 0 && this.center.equals(circle.center);
+    }
+    public double perimeter(){
+        return 2*Math.PI*radius;
+    }
+    public double area(){
+        return Math.PI*Math.pow(radius, 2);
+    }
+    public Circle add(Circle c){
+        return new Circle(this.center.add(c.center), this.radius + c.radius);
+    }
+    public static Circle add(Circle t, Circle c){
+        return new Circle(t.center.add(c.center), t.radius + c.radius);
+    }
+
 }

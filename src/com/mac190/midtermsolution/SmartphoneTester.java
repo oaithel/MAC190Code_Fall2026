@@ -12,12 +12,12 @@ public class SmartphoneTester {
         System.out.println("D2: " + D2);
         Device D3 = Device.add(D1, D2);
         System.out.println("D3: " + D3);
-        Smartphone S1 = new Smartphone(D1, 20);
+        ISmartphone S1 = new ISmartphone(D1, 20);
         System.out.println("S1: " +S1);
         D2.setBrand("Apple");
-        Smartphone S2 = new Smartphone(D2, 50);
+        ISmartphone S2 = new ISmartphone(D2, 50);
         System.out.println("S2: " + S2);
-        Smartphone S3 = S1.add(S2);
+        ISmartphone S3 = S1.add(S2);
         System.out.println("S3: " + S3);
 
     }

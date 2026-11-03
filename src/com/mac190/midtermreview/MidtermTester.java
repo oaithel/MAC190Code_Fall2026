@@ -18,12 +18,12 @@ public class MidtermTester {
         //using the static add method
         R1 = Rectangle.add(R1, R2);
         System.out.println("R1: " + R1 + " Perim: " + R1.perim() + " area: " + R1.area());
-        Cube C1 = new Cube(R1, 23);
+        ICube C1 = new ICube(R1, 23);
         System.out.println("C1: " + C1);
-        Cube C2 = new Cube(C1);
+        ICube C2 = new ICube(C1);
         System.out.println("C2: " + C2);
         //using the static method add, add C2 to C1.
-        C1 = Cube.add(C1, C2);
+        C1 = ICube.add(C1, C2);
         System.out.println("C1: " + C1);
         //Make a Cube C3 that is the sum of C2 and a Cube made of R2 and 10,
         //first do it in two instructions, then do it using only ONE instruction.
@@ -31,7 +31,7 @@ public class MidtermTester {
         Cube temp = new Cube(R2, 10);
         Cube C3 = C2.add(temp);
          */
-        Cube C3 = C2.add(new Cube(R2, 10));
+        ICube C3 = C2.add(new ICube(R2, 10));
         System.out.println("C3: " + C3);
     }
 }

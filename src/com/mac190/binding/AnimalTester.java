@@ -3,7 +3,7 @@ package com.mac190.binding;
 public class AnimalTester {
     public static void main(String[] args) {
         //create a defaut Animal A1
-        Animal A1 = new Animal();
+        Animal A1 = new Dog();
         //set color to gray, age to 3, species to Canine, diet to Omnivore
         //display it
         A1.setSpecies("Canine");

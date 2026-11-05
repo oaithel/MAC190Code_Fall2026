@@ -7,7 +7,18 @@ Implement a class Animal that has the following properties:
 - toString, equals.
 - method speak() to display message: "Don't know how to speak yet!"
  */
-public class Animal {
+/*
+Very often we don't know how some methods should be implemented in
+base classes, but we want to make sure that any inherited class
+that's not abstract must implement that method.
+A class can have as many abstract methods as you want. If there is
+one abstract method in a class, the class must be defined as abstract.
+You cannot instanciate an abstract class. You cannot make an
+onject out of an abstract class, you can use it as a reference
+to an object of teh derived classes that implement the abstract
+methods.
+ */
+abstract class Animal {
     private String diet;
     private String color;
     private String species;
@@ -67,7 +78,5 @@ public class Animal {
         return age == animal.age && java.util.Objects.equals(diet, animal.diet) && java.util.Objects.equals(color, animal.color) && java.util.Objects.equals(species, animal.species);
     }
 
-    public void speak(){
-        System.out.println("Don't know how to speak yet!");
-    }
+    abstract void speak();
 }

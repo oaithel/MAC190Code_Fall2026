@@ -24,7 +24,7 @@ speedUp only increases the speed if it is movingForward.
 Test your class.
 
  */
-public class BMW extends Vehicle{
+public class BMW extends Vehicle implements iDrive{
     private String model;
     private String color;
     private int numberSeats;
@@ -94,15 +94,15 @@ public class BMW extends Vehicle{
     }
 
     @Override
-    void turnRight(double degrees) {
+    public void turnRight(double degrees) {
         System.out.println("Turning Right " + degrees + " degrees");
     }
     @Override
-    void turnLeft(double degrees) {
+    public void turnLeft(double degrees) {
         System.out.println("Turning left " + degrees + " degrees");
     }
     @Override
-    void brake() {
+    public void brake() {
         if(this.state != State.STOPPED){
             System.out.println("Stopping the car..");
             state = State.STOPPED;
@@ -112,7 +112,7 @@ public class BMW extends Vehicle{
         }
     }
     @Override
-    boolean speedUp(double sp) {
+    public boolean speedUp(double sp) {
         if(state == State.FORWARD){
             this.speed = Math.min(this.speed + sp, 100);
             System.out.println("Moving forward at speed: " + speed + " m/h");
@@ -122,7 +122,7 @@ public class BMW extends Vehicle{
         return false;
     }
     @Override
-    boolean moveBackwards() {
+    public boolean moveBackwards() {
         if(state == State.BACKWARD){
             System.out.println("Moving backwards already");
             return false;
@@ -138,7 +138,7 @@ public class BMW extends Vehicle{
         }
     }
     @Override
-    boolean moveForward() {
+    public boolean moveForward() {
         if(state == State.FORWARD){
             System.out.println("Moving forward already");
             return false;

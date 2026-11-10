@@ -12,6 +12,12 @@ public class VehicleTester {
         yourBM.brake();
         yourBM.moveBackwards();
         yourBM.turnRight(30);
+        //Use the interface iDrive
+        System.out.println("----Using the interface---");
+        iDrive ifBM = yourBM;
+        ifBM.moveForward();
+        //You canuse all methods defined in idrive interface only.
+        //yourBM.getColor(); //you cannot use getColor() because it's not defined in the interface.
 
         //create a Tesla object
         //display it
@@ -34,5 +40,14 @@ public class VehicleTester {
         V.brake();
         System.out.println("make is: " + V.getMake());
         //Add any testing you deem necessary
+
+        //I can use the same interface ifBM to drive a tesla.
+        System.out.println("----using interface to drive a tesla----");
+        ifBM = T;
+        ifBM.moveForward();
+        ifBM.turnLeft(20);
+        ifBM.speedUp(30);
+        ifBM.brake();
+
     }
 }

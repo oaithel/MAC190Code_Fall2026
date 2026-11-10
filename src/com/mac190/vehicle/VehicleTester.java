@@ -33,7 +33,6 @@ public class VehicleTester {
         V.moveBackwards();
         V.brake();
         System.out.println("make is: " + V.getMake());
-
         //Add any testing you deem necessary
     }
 }

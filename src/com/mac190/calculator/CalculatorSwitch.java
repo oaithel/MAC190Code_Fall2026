@@ -1,7 +1,5 @@
 package com.mac190.calculator;
 
-import com.mac190.binding.Animal;
-
 import java.util.Scanner;
 
 public class CalculatorSwitch {

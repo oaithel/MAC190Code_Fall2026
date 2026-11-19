@@ -27,6 +27,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class OutputFiles {
     public static void main(String[] args) {
@@ -63,10 +64,6 @@ public class OutputFiles {
             //FileWriter fw = new FileWriter("C:/Users/B306_INSTRUCTOR/IdeaProjects/MAC190Code_Fall2026/example.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             //now you can write to the file
-            bw.write("This is the first line\n");
-            bw.write("This is the second line\n");
-            bw.write("This is the third line.");
-            bw.close();
 
             /*
             Modify the program so that it reads lines of text from the user
@@ -79,7 +76,17 @@ public class OutputFiles {
                 .
             The text is saved to the file.
              */
-
+            //create a Scanner
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter your text and end it with . on empty line: ");
+            String line = sc.nextLine();
+            while(!line.trim().equals(".")){
+                bw.write(line + "\n");
+                //read a new line
+                line = sc.nextLine();
+            }
+            bw.close();
+            bw.close();
         }catch (IOException e){
             System.out.println("Caught an exception: " +e.getMessage());
         }

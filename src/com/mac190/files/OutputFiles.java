@@ -23,10 +23,7 @@ to find the file example.txt
  a file to move a file ...
  */
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class OutputFiles {
@@ -86,7 +83,20 @@ public class OutputFiles {
                 line = sc.nextLine();
             }
             bw.close();
-            bw.close();
+
+            //Now let's read from the file we just created.
+            //Need a file reader and a Scanner
+            FileReader fr = new FileReader(myRealFile);
+            //use the file reader to create a scanner
+            Scanner scFile = new Scanner(fr);
+            //use the Scanner as you use it for the keyboard
+            int count = 0;
+            while(scFile.hasNext()){
+                line = scFile.nextLine();
+                System.out.println("l" + count + ": " + line);
+                count++;
+            }
+            scFile.close();
         }catch (IOException e){
             System.out.println("Caught an exception: " +e.getMessage());
         }

@@ -1,5 +1,5 @@
 package com.mac190.vehicle;
-
+//TODO: Handle all exception in main not in class Tesla or BMW or Vehicle
 public class VehicleTester {
     public static void main(String[] args) {
         //create a BMW

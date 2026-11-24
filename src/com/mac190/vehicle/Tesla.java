@@ -21,7 +21,7 @@ or the input (if the input is less than 10 m/h) and display the speed, limit the
 speedUp only increases if it is movingForward.
 
 Test your class.
-
+HW 9: Look for TODO: No try-catch in this class, all try-catch in tester
 */
 public class Tesla extends Vehicle implements iDrive{
     private String model;
@@ -104,6 +104,7 @@ public class Tesla extends Vehicle implements iDrive{
             state = State.STOPPED;
             speed = 0;
         }else{
+            //TODO: throw a checked exception with same message
             System.out.println("Stopped already!");
         }
     }
@@ -115,15 +116,18 @@ public class Tesla extends Vehicle implements iDrive{
             System.out.println("Moving forward at speed: " + speed + " m/h");
             return true;
         }
+        //TODO: throw a checked exception with same message
         System.out.println("Cannot speed up");
         return false;
     }
     @Override
     public boolean moveBackwards() {
         if(state == State.BACKWARD){
+            //TODO: throw a checked exception with same message
             System.out.println("Moving backwards already");
             return false;
         }else if(state == State.FORWARD){
+            //TODO: throw a checked exception with same message
             System.out.println("Cannot move backwards, moving forward, stop first");
             return false;
         }else{
@@ -137,9 +141,11 @@ public class Tesla extends Vehicle implements iDrive{
     @Override
     public boolean moveForward() {
         if(state == State.FORWARD){
+            //TODO: throw a checked exception with same message
             System.out.println("Moving forward already");
             return false;
         }else if(state == State.BACKWARD){
+            //TODO: throw a checked exception with same message
             System.out.println("Cannot move forward, moving backwards, stop first");
             return false;
         }else{

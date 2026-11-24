@@ -1,9 +1,9 @@
 package com.mac190.exceptions;
 
 public class ExceptionThrower {
-    public void throwMeCheckedException(int a) throws Exception{
+    public void throwMeCheckedException(int a) throws MyException, Exception{
         if(a < 10){
-            System.out.println("No exception is thrown");
+            throw new MyException("this is my exception");
         }else{
             throw new Exception("Input is larger or equal to 10");
         }
@@ -13,6 +13,7 @@ public class ExceptionThrower {
             throw new RuntimeException("a is larger than 20 big problem!!!");
         }else{
             System.out.println("No unchecked exception is thrown");
+
         }
     }
 }

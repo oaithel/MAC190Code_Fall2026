@@ -26,11 +26,13 @@ public class IntroExceptions {
         try {
             ET.throwMeCheckedException(num);
             System.out.println("Successful call");
-        }catch(Exception e){
+        }catch(MyException e){
             //e.printStackTrace();
-            System.out.println("Caught Exception: " + e.getMessage());
+            System.out.println("Caught MyException: " + e.getMessage());
 
-        }finally {
+        }catch(Exception e) {
+            System.out.println("Caught Exception: " + e.getMessage());
+        }finally{
             //this will always be executed, no matter if the exception is triggered or not
             System.out.println("This will always be displayed!!");
         }
